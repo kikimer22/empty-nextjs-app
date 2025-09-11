@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
+
+@custom-variant dark (&:where(.dark, .dark *, [data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --color-my-color-100: blue;
+}
+
+@variant dark {
+  --color-my-color-100: red;
+}
+
+@plugin "daisyui/theme" {
+  name: light;
+  default: true;
+  /*--color-primary: var(--color-my-color-100);*/
+}
+
+@plugin "daisyui/theme" {
+  name: dark;
+  default: true;
+  /*--color-primary: var(--color-my-color-100);*/
+}
+
+@layer base {
+  * {
+    @apply motion-reduce:transition-none! motion-reduce:hover:transform-none!;
+  }
+
+  button, a {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+}
+
+:root {
+  color-scheme: light dark;
+  interpolate-size: allow-keywords;
+}
+
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
+  transition: color 9999s ease-out, background-color 9999s ease-out;
+
+  -webkit-transition-delay: 9999s;
+  transition-delay: 9999s;
+}

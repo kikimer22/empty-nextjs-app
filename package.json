@@ -3,25 +3,41 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "db:m": "npx prisma migrate dev --name init-migration",
+    "db:m:r": "npx prisma migrate reset",
+    "db:g": "npx prisma generate"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.10.0",
+    "@neondatabase/api-client": "^2.2.0",
+    "@prisma/client": "^6.16.0",
+    "@prisma/extension-accelerate": "^2.0.2",
+    "@prisma/extension-optimize": "^2.0.0",
+    "next": "15.5.2",
+    "next-auth": "5.0.0-beta.29",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.5.2"
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
-    "eslint": "^9",
+    "@eslint/eslintrc": "^3.3.1",
+    "@next/eslint-plugin-next": "15.5.2",
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^20.19.13",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "daisyui": "^5.1.10",
+    "eslint": "^9.35.0",
     "eslint-config-next": "15.5.2",
-    "@eslint/eslintrc": "^3"
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "prisma": "^6.16.0",
+    "tailwindcss": "^4.1.13",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
   }
 }
