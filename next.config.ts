@@ -2,7 +2,7 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  // swcMinify: true,
 
   experimental: {
     serverActions: {
@@ -43,7 +43,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  output: 'standalone',
 };
 
 export default nextConfig;

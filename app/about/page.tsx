@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default async function Page() {
   return (
-    <div className="flex-1 hero">
+    <div className="flex-1 hero py-8 md:py-0">
       <div className="hero-content flex-col lg:flex-row">
         <div className="card bg-base-100 shadow-md">
           <div className="card-body">
