@@ -26,7 +26,7 @@ async function PostsList() {
     include: { author: true },
     orderBy: { createdAt: 'desc' },
     take: 10,
-  });
+  }) as Post[] | null;
 
   if (!posts) {
     return (
@@ -43,7 +43,7 @@ async function PostsList() {
           <h2 className="card-title">Posts</h2>
           <Link href={ROUTES.CREATE_POST} className="btn btn-sm btn-primary">{ROUTES_NAMES.CREATE_POST}</Link>
         </div>
-        <RenderPostsListOrEmptyState posts={(posts as any[])}/>
+        <RenderPostsListOrEmptyState posts={(posts as Post[])}/>
       </div>
     </div>
   );

@@ -1,18 +1,18 @@
 export type ActionResult<T = unknown> =
   | { ok: true; data?: T; redirectTo?: string }
-  | { ok?: false; error: string };
+  | { ok?: false, error: string };
 
 export type Theme = 'light' | 'dark';
 
 export interface Author {
   id: string;
-  name: string;
+  name: string | null;
   email: string;
   emailVerified: string | null;
-  image: string;
+  image: string | null;
   password: string | null;
-  createdAt: string; // або Date, якщо парсиш
-  updatedAt: string; // або Date
+  createdAt: Date | string;
+  updatedAt: Date | string;
 }
 
 export interface Post {
@@ -21,7 +21,7 @@ export interface Post {
   content: string;
   published: boolean;
   authorId: string;
-  createdAt: string; // або Date
-  updatedAt: string; // або Date
+  createdAt: Date | string;
+  updatedAt: Date | string;
   author: Author;
 }

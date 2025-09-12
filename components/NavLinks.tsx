@@ -31,9 +31,14 @@ const NavLinks: FC<NavLinksProps> = memo(
             </li>
           </>
         ) : (
-          <li>
-            <NavLink href={ROUTES.SIGN_IN}>{ROUTES_NAMES.SIGN_IN}</NavLink>
-          </li>
+          <>
+            <li>
+              <NavLink href={ROUTES.SIGN_UP}>{ROUTES_NAMES.SIGN_UP}</NavLink>
+            </li>
+            <li>
+              <NavLink href={ROUTES.SIGN_IN}>{ROUTES_NAMES.SIGN_IN}</NavLink>
+            </li>
+          </>
         )}
       </ul>
     );
