@@ -47,7 +47,7 @@ export default function ThemeController() {
 
   return (
     <label className="swap swap-rotate">
-      <input type="checkbox" className="theme-controller" checked={theme === DARK} onChange={toggleTheme}/>
+      <input type="checkbox" className="theme-controller input-lg" checked={theme === DARK} onChange={toggleTheme}/>
 
       <svg
         className="swap-off h-8 w-8 lg:w-10 lg:h-10 fill-current"

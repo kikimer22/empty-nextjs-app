@@ -32,7 +32,7 @@ export default async function SignUpPage() {
         {/* Right: Auth Card */}
         <div className="card bg-base-100 shadow-2xl border border-base-200">
           <div className="card-body p-8">
-            <div className="flex items-center justify-between mb-2">
+            <div className="mb-2">
               <BackBtn/>
             </div>
             <div className="text-center mb-4">

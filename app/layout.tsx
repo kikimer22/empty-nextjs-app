@@ -52,10 +52,10 @@ export default async function RootLayout({
   return (
     <html lang="en" data-theme={theme}>
     <body
-      className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-hidden h-dvh`}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
     <SessionProvider session={session}>
-      <div className="min-h-screen flex flex-col overflow-x-hidden overflow-y-auto h-full">
+      <div className="min-h-screen flex flex-col">
         <Header/>
         <main className="flex-1 flex flex-col bg-base-200">{children}</main>
         <Footer/>

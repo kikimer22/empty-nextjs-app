@@ -15,9 +15,9 @@ export default function CreatePostForm() {
     <form action={formAction} className="space-y-4">
       {/*title*/}
       <div className="form-control">
-        <label className="floating-label" htmlFor="create-post-title">
+        <label className="floating-label text-base" htmlFor="create-post-title">
           <span>Title</span>
-          <input id="create-post-title" className="input input-md validator w-full placeholder:select-none"
+          <input id="create-post-title" className="input input-lg validator w-full placeholder:select-none"
                  type="text"
                  name="title"
                  required
@@ -30,14 +30,14 @@ export default function CreatePostForm() {
       </div>
       {/*content*/}
       <div className="form-control">
-        <label className="floating-label" htmlFor="create-post-content">
+        <label className="floating-label text-base" htmlFor="create-post-content">
           <span>Content</span>
           <textarea
             id="create-post-content"
             name="content"
             required
             minLength={1}
-            className="textarea textarea-md textarea-bordered w-full"
+            className="textarea textarea-lg textarea-bordered w-full"
             rows={6}
             placeholder="Content"
             title="Content is required"

@@ -10,6 +10,13 @@ interface Props {
 }
 
 export default function UserDropdown({ session }: Props) {
+  const handleClick = () => {
+    const elem = document.activeElement as HTMLElement | null;
+    if (elem && typeof elem.blur === 'function') {
+      elem.blur();
+    }
+  };
+
   return (
     <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar placeholder">
@@ -34,7 +41,7 @@ export default function UserDropdown({ session }: Props) {
           <h4 className="pt-2 px-6 mb-1 text-xl text-primary">{session.user?.name ?? session.user?.email}</h4>
         }
         <ul tabIndex={0} className="menu menu-lg">
-          <li>
+          <li onClick={handleClick}>
             {session ? (
               <SignOutBtn className="link link-hover"/>
             ) : (

@@ -45,12 +45,20 @@
 :root {
   color-scheme: light dark;
   interpolate-size: allow-keywords;
+  -webkit-text-size-adjust: 100%;
+  overscroll-behavior: none;
 }
-
 
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+input,
+textarea,
+select {
+  touch-action: manipulation;
+  font-size: 16px;
 }
 
 input:-webkit-autofill,

@@ -17,9 +17,9 @@ export default function SignUpForm() {
       <form action={formAction} className="flex flex-col gap-4">
         {/*email*/}
         <div className="form-control">
-          <label className="floating-label" htmlFor="signup-email">
+          <label className="floating-label text-base" htmlFor="signup-email">
             <span>Email</span>
-            <input id="signup-email" className="input validator w-full placeholder:select-none"
+            <input id="signup-email" className="input input-lg validator w-full placeholder:select-none"
                    type="email"
                    name="email"
                    required
@@ -32,9 +32,9 @@ export default function SignUpForm() {
         </div>
         {/*Password*/}
         <div className="form-control">
-          <label className="floating-label" htmlFor="signup-password">
+          <label className="floating-label text-base" htmlFor="signup-password">
             <span>Password</span>
-            <div className="input validator w-full">
+            <div className="input input-lg validator w-full">
               <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g strokeLinejoin="round"
                    strokeLinecap="round"
