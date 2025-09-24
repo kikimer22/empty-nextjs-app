@@ -1,5 +1,5 @@
 import Loader from '@/components/Loader';
 
 export default async function Loading() {
-  return <Loader/>;
+  return <div className="flex-1 flex flex-col items-center justify-center min-h-[402px]"><Loader/></div>;
 }
