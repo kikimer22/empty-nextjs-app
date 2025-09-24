@@ -5,19 +5,17 @@ import { FlatCompat } from '@eslint/eslintrc';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+const compat = new FlatCompat({ baseDirectory: __dirname });
 
-const eslintConfig = [
+const C = [
   ...compat.config({
     extends: ['next/core-web-vitals', 'next/typescript'],
-    ignores: [
-      "node_modules/**",
-      ".next/**",
-      "out/**",
-      "build/**",
-      "next-env.d.ts",
+    ignorePatterns: [
+      'node_modules/**',
+      '.next/**',
+      'out/**',
+      'build/**',
+      'next-env.d.ts',
     ],
     rules: {
       'react/no-unescaped-entities': 'off',
@@ -26,4 +24,4 @@ const eslintConfig = [
   }),
 ];
 
-export default eslintConfig;
+export default C;
